@@ -161,6 +161,18 @@
       </plugins>
     </pluginManagement>
   </build>
+	<distributionManagement>
+        <repository>
+            <id>deployment</id>
+            <name>Internal Releases</name>
+            <url>http://http://18.237.78.78:8081/repository/release/</url>
+        </repository>
+        <snapshotRepository>
+            <id>deployment</id>
+            <name>Internal Snapshot Releases</name>
+            <url>http://18.237.78.78:8081/repository/snapshorts/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
   <dependencyManagement>
     <dependencies>
@@ -218,15 +230,3 @@
   </prerequisites>
 
 </project>
-<distributionManagement>
-         <repository>
-                  <id>deployment</id> <!-- this ID should match with server id which we configure in settings.xml file. -->
-		<name>Nexus Release Repository</name>
-		<url>http://52.11.62.201:8081/nexus/content/repositories/releases/</url>
-	</repository>
-	<snapshotRepository>
-                  <id>deployment</id>
-		<name>Nexus Snapshots Repository</name>
-		<url>http://52.11.62.201:8081/nexus/content/repositories/snapshots/</url>
-         </snapshotRepository>
-</distributionManagement>
