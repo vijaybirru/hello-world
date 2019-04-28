@@ -229,4 +229,4 @@
 		<name>Nexus Snapshots Repository</name>
 		<url>http://52.11.62.201:8081/nexus/content/repositories/snapshots/</url>
          </snapshotRepository>
-#</distributionManagement>
+</distributionManagement>
