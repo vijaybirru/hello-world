@@ -10,6 +10,6 @@ node{
 		sh '"/opt/maven/bin/mvn" -V clean test'
 	}
                stage('package')
-		sh '"/opt/maven/bin/mvn" -V clean package
+		sh '"/opt/maven/bin/mvn" -V clean package'
 	}
 }
