@@ -9,7 +9,7 @@ node{
                stage('test'){
 		sh '"/opt/maven/bin/mvn" -V clean test'
 	}
-               stage('package')
+	stage('package'){
 		sh '"/opt/maven/bin/mvn" -V clean package'
 	}
 }
