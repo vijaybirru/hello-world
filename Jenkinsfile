@@ -1,7 +1,7 @@
 node{
 	stage('Checkout'){
 		//Checkout the code from a GitHub repository
-		git 'https://github.com/skeeto/sample-java-project.git'
+		git 'https://github.com/skeeto/hello-world.git'
 	}
 	stage('build'){
 		sh '"/opt/maven/bin/mvn" -V clean compile'
