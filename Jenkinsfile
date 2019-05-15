@@ -1,7 +1,7 @@
 node{
 	stage('Checkout'){
 		//Checkout the code from a GitHub repository
-		git 'https://github.com/sitepoint-editors/angular-todo-app.git'
+		git 'https://github.com/skeeto/sample-java-project.git'
 	}
 	stage('build'){
 		sh '"/opt/maven/bin/mvn" -V clean compile'
