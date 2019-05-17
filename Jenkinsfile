@@ -13,6 +13,8 @@ node{
 		sh '"/opt/maven/bin/mvn" -V clean package'
 	}
 	 stage('Deploy to Tomcat'){
-      sshPublisher(publishers: [sshPublisherDesc(configName: 'TOmcat', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/opt/tomcat/webapps/', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '\'/var/lib/jenkins/workspace/Jenkins file1/target/*.jar\'')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
-   }
+		 sshagent(['xnxnxnxn']) {
+			 sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@34.220.138.43:/opt/tomcat8/webapps/'
+      }
+}
 }
