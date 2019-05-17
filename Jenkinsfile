@@ -14,8 +14,6 @@ node{
 	}
 	 stage('Deploy to Tomcat'){
       
-      sshagent(['bvkbvk']) {
-         sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.24.252:/opt/tomcat/webapps/'
-      }
+      sshPublisher(publishers: [sshPublisherDesc(configName: 'TOmcat', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/opt/tomcat/webapps/', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '\'**/*.jar\'')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
    }
 }
