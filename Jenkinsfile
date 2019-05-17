@@ -10,6 +10,12 @@ node{
 		sh '"/opt/maven/bin/mvn" -V clean test'
 	}
 	stage('package'){
-		sh '"/opt/maven/bin/mvn" -V clean sonar:sonar'
+		sh '"/opt/maven/bin/mvn" -V clean package'
 	}
+	 stage('Deploy to Tomcat'){
+      
+      sshagent(['TomcatDemoCredentials']) {
+         sh 'scp -o StrictHostKeyChecking=no target/*.war root@34.214.131.138:/opt/tomcat/webapps/'
+      }
+   }
 }
