@@ -13,5 +13,9 @@ node{
 	stage('package'){
 		sh '"/opt/maven/bin/mvn" -V clean package'
 	}
-	 
+	 stage('Deploy to devserver-docker'){
+		 sshagent(['xnxnxnxn']) {
+			 sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/2nd ec2-user@54.202.126.109:/opt/'
+      }
+}
 }
