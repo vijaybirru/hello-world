@@ -15,7 +15,7 @@ node{
 	}
 	 stage('Deploy to devserver-docker'){
 		 sshagent(['xnxnxnxn']) {
-			 sh 'scp -o StrictHostKeyChecking=no 2nd ec2-user@54.202.126.109:/opt/'
+			 sh 'scp -o StrictHostKeyChecking=no workspace/2nd ec2-user@54.202.126.109:/opt/'
       }
 }
 }
