@@ -16,7 +16,8 @@ node{
 	 stage('Deploy to devserver-docker'){
 		 sshagent(['xnxnxnxn']) {
 			 sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@54.202.126.109:/opt/dock'
-			 sh ' docker build -t vijay /opt/dock/dockerfile'
+			 sh ' docker build -t kammana/my-app:2.0.0 /opt/dock/.'
+			 sh ' docker run -p 8080:8080 -d --name my-app kammana/my-app:2.0.0'
       }
 }
 }
