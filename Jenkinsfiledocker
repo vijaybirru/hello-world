@@ -15,7 +15,8 @@ node{
 	}
 	 stage('Deploy to devserver-docker'){
 		 sshagent(['xnxnxnxn']) {
-		         sh ' rm -rf ec2-user@172.31.62.54:/opt/war/*'
+		         ssh ec2-user@54.187.118.102 'rm -rf /opt/war/*'
+
 			
 			 
 			
