@@ -15,7 +15,9 @@ node{
 	}
 	 stage('Deploy to devserver-docker'){
 		 sshagent(['xnxnxnxn']) {
+		         sh ' rm -rf ec2-user@54.187.118.102:/opt/war'
 			 sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@54.187.118.102:/opt/war'
+			 
 			
 			 
       }
