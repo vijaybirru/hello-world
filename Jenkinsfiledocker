@@ -16,7 +16,7 @@ node{
 	 stage('Deploy to devserver-docker'){
 		 sshagent(['xnxnxnxn']) {
 		         sh " ssh ec2-user@34.220.37.219 'rm -rf /opt/tomcat/webapps/*.war' "
-			
+			  sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@34.220.37.219:/opt/tomcat/webapps/'
 
 			
 			 
