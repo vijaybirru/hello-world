@@ -17,7 +17,7 @@ node{
 		 sshagent(['xnxnxnxn']) {
 		         sh " ssh ec2-user@34.220.37.219 'rm -rf /opt/tomcat/webapps/*.war' "
 			  sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@34.220.37.219:/opt/tomcat/webapps/'
-                          sh ' docker build -t 108w1a0457/mytomcat:0.0.1 /opt/dock/dockerfile'
+                          sh ' docker build -t 108w1a0457/mytomcat:0.0.1 /opt/dock/.'
 
 			
 			 
