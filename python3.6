@@ -1,0 +1,22 @@
+FROM \docker pull centos/python-36-centos7
+WORKDIR /opt
+RUN yum install centos-release-scl -y -y
+RUN yum install epel-release -y -y
+RUN yum install python-pip -y -y
+RUN yum install rh-python36 -y -y
+ENTRYPOINT scl enable rh-python36 bash
+
+
+RUN yum install epel-release -y -y
+RUN yum install python-pip -y -y
+CMD pip install --upgrade pip
+
+RUN yum install epel-release -y -y
+RUN yum install python-pip -y -y
+RUN pip install --upgrade pip
+
+pip install jaeger-client
+
+yum install python36u python36u-pip
+alias python=python3.6
+alias pip=pip3.6
