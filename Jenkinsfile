@@ -4,10 +4,10 @@ node {
       git 'https://github.com/javahometech/myweb'   
     }
     stage('Maven Build'){
-      sh 'mvn clea package'   
+      sh 'mvn clean package'   
     }
     }
-    catch (ERROR) {
+    catch (sucess) {
         echo "Caught: ${err}"
         println "Sending complete build status"
         emailext body: '${BUILD_LOG, maxLines=35, escapeHtml=false}', subject: '${JOB_NAME}-${BUILD_NUMBER}', to: 'vijaykumarbirru876@gmail.com'
