@@ -7,10 +7,8 @@ node {
         
     stage("Build") {
 	
-                status = sh returnStatus:true, script: """
                     sh 'mvn clean package'
-                    
-                """
+                   
                 }
                 sendMail(status)
                 
