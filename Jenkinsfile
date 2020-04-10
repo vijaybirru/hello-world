@@ -5,7 +5,7 @@ node {
       git 'https://github.com/javahometech/myweb'   
     }
     stage('Maven Build'){
-      sh 'mvn clean packag'   
+      sh 'mvn clean package'   
     }
     stage('Email'){
     
