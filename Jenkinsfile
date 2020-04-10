@@ -1,5 +1,6 @@
 node {
     try {
+    emailext body: 'Jenkins job started !!!!!!!', subject: 'Email Notification for starting jenkins job', to: 'vijaykumarbirru876@gmail.com'
     stage('Git'){
       git 'https://github.com/javahometech/myweb'   
     }
