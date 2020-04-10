@@ -8,7 +8,7 @@ node {
     stage("Build") {
 	
                 status = sh returnStatus:true, script: """
-                    sh 'mvn clea package'
+                    sh 'mvn clean package'
                     
                 """
                 }
