@@ -10,7 +10,7 @@ node {
     stage('Email'){
     
     mail bcc: '', body: '''Thanks,
-Java Home''', cc: '', from: '', replyTo: '', subject: "[Jenkins] ${JOB_NAME}-${BUILD_NUMBER}" SUCCESS, to: 'vijaykumarbirru876@gmail.com'''
+Java Home''', cc: '', from: '', replyTo: '', subject: "[Jenkins] ${JOB_NAME}-${BUILD_NUMBER} SUCCESS ", to: 'vijaykumarbirru876@gmail.com'''
 }
     }
     catch (err) {
