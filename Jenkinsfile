@@ -17,9 +17,4 @@ node {
         subject: "[Jenkins] ${JOB_NAME}-${BUILD_NUMBER}",
         to: "Vijaykumarbirru876@gmail.com"
     }
-    stage('Email'){
-    
-    mail bcc: '', body: '''Thanks,
-Java Home''', cc: '', from: 'vijaykumarbirru876@gmail.com', replyTo: '', subject: "[Jenkins] ${JOB_NAME}-${BUILD_NUMBER} SUCCESS ", to: 'vijaykumarbirru876@gmail.com'''
-}
 }
