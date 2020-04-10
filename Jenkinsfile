@@ -8,16 +8,13 @@ node {
       sh 'mvn clean packag'   
     }
     }
-    catch (suc) {
-        echo "Caught: ${SUCCESS}"
-        println "Sending complete build status"
-        emailext body: '${BUILD_LOG, maxLines=35, escapeHtml=false}', subject: '${JOB_NAME}-${BUILD_NUMBER}', to: 'vijaykumarbirru876@gmail.com'
-        currentBuild.result = 'SUCCESS'
-    }
     catch (err) {
         echo "Caught: ${err}"
         println "Sending complete build status"
-        emailext body: '${BUILD_LOG, maxLines=35, escapeHtml=false}', subject: '${JOB_NAME}-${BUILD_NUMBER}', to: 'vijaykumarbirru876@gmail.com'
         currentBuild.result = 'FAILURE'
+		emailext body: '''${SCRIPT, template="groovy-html.template"}''',
+        mimeType: 'text/html',
+        subject: "[Jenkins] ${JOB_NAME}-${BUILD_NUMBER}",
+        to: "Vijaykumarbirru876@gmail.com"
     }
 }
