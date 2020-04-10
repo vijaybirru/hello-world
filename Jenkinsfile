@@ -5,7 +5,7 @@ node {
       git 'https://github.com/javahometech/myweb'   
     }
     stage('Maven Build'){
-      sh 'mvn clean package'   
+      sh 'mvn clean packag'   
     }
     }
     catch (suc) {
