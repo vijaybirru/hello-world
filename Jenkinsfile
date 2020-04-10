@@ -7,6 +7,11 @@ node {
     stage('Maven Build'){
       sh 'mvn clean packag'   
     }
+    stage('Email'){
+    
+    mail bcc: '', body: '''Thanks,
+Java Home''', cc: '', from: '', replyTo: '', subject: "[Jenkins] ${JOB_NAME}-${BUILD_NUMBER}" SUCCESS, to: 'vijaykumarbirru876@gmail.com'''
+}
     }
     catch (err) {
         echo "Caught: ${err}"
