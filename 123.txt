@@ -1,3 +1,44 @@
-ihi
+Ansible
 
-hi all
+1.completed patching for 250 servers using ansible playbooks via jenkins.
+2.Installation of RMQ in to multiple servers using ansible playbooks via jenkins
+3.Installation of RMQ CLUSTERING on different nodes using ansible playbooks via jenkins.
+4.Installation of Jaeger agent on different servers using ansible playbooks via jenkins.
+5.Installation of Jaeger collector, Elastic search, UI in to different servers using ansible playbooks via jenkins.
+6.Installation of Jmeter(Docker) on to remote machines using ansible playbooks via jenkins
+7.Jemter Load Testing in to docker containers via swarm achieved by using playbooks via jenkins
+8.Installation of docker and docker swarm in to remote machines using ansible playbooks via jenkins
+9.Installation of portainer in to remote machines using ansible playbooks via jenkins
+10.Removing unused images and containers in remote machined using ansible playbooks via jenkins
+11.Creation of Docker service, docker network in to remote machines using ansible playbooks via jenkins groovy
+12.
+used different modules in ansible like yum,copy,add,fetch,lineinfile,shell,git
+used copy module to copy files from local machine to remote machined
+used fetch module to copy files from remote machine to master machined
+used shell module to install docker, create docker service, remove docker service, scale docker service,
+
+
+
+Docker & Docker swarm
+
+1.Create Docker file from scratch to build base image.
+2.create Docker file to copy artifacts from jenkins/workspace
+3.Creation of Images from Docker file.
+4.creation of containers from the customized images for deployment .
+5.creation of docker service and microservices deployment in to docker services
+6.scaling of docker service (docker service scale )
+7.creation of docker network and deploying application in to containers linking network
+8.creating docker volumes.****************
+9.docker compose************
+10.Exposing server port with container port to access the application running in the container.
+11. scaling the docker services.
+12.
+
+
+AWS:
+1. Written Cloudformation templates for IAAS
+2. implemented one click deployment using cloudformation (creation of EC2,ALB,TG,Listeners,)
+3. EC2 creation,S3,IAM, AMI, snapshots, ELB,ALB
+4. creation of VPC from the scratch. cidr selection
+5.ECR, ECS
+6.
